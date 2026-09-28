@@ -1,0 +1,199 @@
+﻿@model IEnumerable<ProductCatalog.Models.Product>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .product-page {
+        min-height: 78vh;
+        padding: 55px 25px 70px;
+        background: linear-gradient(135deg, #eef8ff, #ffffff);
+    }
+
+    .product-header {
+        text-align: center;
+        margin-bottom: 38px;
+    }
+
+        .product-header span {
+            color: #1683d8;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .product-header h1 {
+            margin: 10px 0;
+            color: #102a43;
+            font-size: 42px;
+        }
+
+        .product-header p {
+            color: #60758a;
+            font-size: 16px;
+        }
+
+    .products {
+        width: 100%;
+        max-width: 1050px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.96);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(15,40,70,0.13);
+        transition: 0.3s;
+        border: 1px solid #e4edf5;
+    }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 22px 45px rgba(15,40,70,0.18);
+        }
+
+        .card img {
+            display: block;
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+    .card-content {
+        padding: 22px;
+    }
+
+    .number {
+        display: inline-block;
+        background: #e5f6ff;
+        color: #1683d8;
+        padding: 7px 12px;
+        border-radius: 9px;
+        font-weight: bold;
+        margin-bottom: 13px;
+    }
+
+    .category {
+        color: #1683d8;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .card h2 {
+        color: #102a43;
+        margin: 7px 0;
+        font-size: 24px;
+    }
+
+    .card p {
+        color: #718096;
+        min-height: 42px;
+        margin-bottom: 15px;
+    }
+
+    .price {
+        font-size: 21px;
+        font-weight: bold;
+        color: #102a43;
+        margin: 18px 0;
+    }
+
+    .btn-product {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background: #061a33;
+        color: white;
+        padding: 12px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .btn-product:hover {
+            background: #1683d8;
+            color: white;
+            text-decoration: none;
+        }
+
+    @@media (max-width: 850px) {
+        .products {
+            grid-template-columns: 1fr;
+            max-width: 430px;
+        }
+
+        .product-header h1 {
+            font-size: 32px;
+        }
+    }
+</style>
+
+<div class="product-page">
+
+    <div class="product-header">
+        <span>PREMIUM COLLECTION</span>
+        <h1>Explore Our Products</h1>
+        <p>Quality products with a clean and modern shopping experience.</p>
+    </div>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=90"
+                 alt="MacBook Air" />
+
+            <div class="card-content">
+                <div class="number">1</div>
+                <div class="category">Laptop</div>
+                <h2>MacBook Air</h2>
+                <p>Powerful and lightweight laptop.</p>
+                <div class="price">₹89999</div>
+
+                <a href="@Url.Action("Index", "Product")" class="btn-product">
+                    View Product
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=900&q=90"
+                 alt="iPhone 15" />
+
+            <div class="card-content">
+                <div class="number">2</div>
+                <div class="category">Mobile</div>
+                <h2>iPhone 15</h2>
+                <p>Premium smartphone with modern design.</p>
+                <div class="price">₹69999</div>
+
+                <a href="@Url.Action("Index", "Product")" class="btn-product">
+                    View Product
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1535468665140-8af0686eb464?auto=format&fit=crop&fm=jpg&q=90&w=900"
+                 alt="AirPods Pro" />
+
+            <div class="card-content">
+                <div class="number">3</div>
+                <div class="category">Audio</div>
+                <h2>AirPods Pro</h2>
+                <p>Wireless audio with clear sound.</p>
+                <div class="price">₹24999</div>
+
+                <a href="@Url.Action("Index", "Product")" class="btn-product">
+                    View Product
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>

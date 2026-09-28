@@ -1,0 +1,119 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<style>
+    .contact-page {
+        min-height: 70vh;
+        padding: 70px 20px;
+        background: linear-gradient(135deg, #eef7ff, #ffffff);
+    }
+
+    .contact-box {
+        max-width: 950px;
+        margin: auto;
+        background: white;
+        padding: 55px;
+        border-radius: 24px;
+        box-shadow: 0 15px 45px rgba(20, 45, 80, 0.12);
+        text-align: center;
+    }
+
+    .contact-tag {
+        color: #1683d8;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    .contact-box h1 {
+        margin: 15px 0;
+        font-size: 42px;
+        color: #102a43;
+    }
+
+    .contact-box > p {
+        color: #60758a;
+        font-size: 17px;
+        margin-bottom: 40px;
+    }
+
+    .contact-cards {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .contact-card {
+        flex: 1;
+        padding: 30px 20px;
+        background: #f5faff;
+        border: 1px solid #e0edf8;
+        border-radius: 18px;
+    }
+
+    .contact-icon {
+        font-size: 30px;
+        margin-bottom: 12px;
+    }
+
+    .contact-card h3 {
+        color: #102a43;
+        margin: 8px 0;
+    }
+
+    .contact-card p {
+        color: #60758a;
+        margin: 0;
+    }
+
+    @@media(max-width:700px) {
+        .contact-cards {
+            flex-direction: column;
+        }
+
+        .contact-box {
+            padding: 30px;
+        }
+    }
+</style>
+
+<div class="contact-page">
+
+    <div class="contact-box">
+
+        <div class="contact-tag">GET IN TOUCH</div>
+
+        <h1>Contact Us</h1>
+
+        <p>
+            Have a question about our Product Catalog?
+            We would be happy to hear from you.
+        </p>
+
+        <div class="contact-cards">
+
+            <div class="contact-card">
+                <div class="contact-icon">📞</div>
+                <h3>Phone</h3>
+                <p>1234567891</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">✉️</div>
+                <h3>Email</h3>
+                <p>jeetJoshi@gmail.com</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">📍</div>
+                <h3>Location</h3>
+                <p>Marwadi University</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
