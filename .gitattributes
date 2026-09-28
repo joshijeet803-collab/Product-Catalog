@@ -63,3 +63,6 @@
 #*.RTF   diff=astextplain
 
 *.js linguist-generated
+Scripts/** linguist-generated
+Content/** linguist-generated
+*.cshtml linguist-language=C#
